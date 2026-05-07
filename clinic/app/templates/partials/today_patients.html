@@ -73,6 +73,10 @@
         <div class="sm:col-span-2 lg:col-span-1">
           <label class="text-xs text-gray-500 mb-1 block font-medium">Treatment</label>
           <select name="treatment" id="filterTreatment" class="w-full px-4 py-2.5 border border-gray-200 rounded-xl text-sm" data-filter-input="true">
+          <option>All</option>
+            {% for i in treatment%}
+            <option value="{{i.Treatment_name}}">{{i.Treatment_name}}</option>
+            {% endfor %}
           </select>
         </div>
       </div>
